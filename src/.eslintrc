@@ -1,0 +1,54 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "globals": {
+    "__DEV__": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "rules": {
+    "no-plusplus": 0,
+    "arrow-body-style": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 0,
+    "import/no-extraneous-dependencies": [0, {"packagePath": "./package.json"}],
+    "arrow-parens": 0,
+    "comma-dangle": 0,
+    "spaced-comment": 2,
+    "new-cap": [
+      2,
+      {
+        "capIsNewExceptions": [
+          "Map",
+          "StackNavigator",
+          "TabNavigator",
+          "StyleSheet",
+          "AUTH"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "jest/no-disabled-tests": 1,
+    "jest/no-focused-tests": 2,
+    "jest/no-identical-title": 2,
+    "jest/valid-expect": 2,
+    "react/no-multi-comp": 0
+  },
+  "plugins": [
+    "react",
+    "jest",
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".json", ".android.js", ".ios.js", ".web.js", ".native.js"]
+      }
+    }
+  }
+}
